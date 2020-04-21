@@ -5,9 +5,9 @@
   <subtitle>godxiaolong</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://muyiio.com/"/>
-  <updated>2020-03-28T06:44:50.392Z</updated>
-  <id>https://muyiio.com/</id>
+  <link href="https://www.muyiio.com/"/>
+  <updated>2020-04-17T03:09:59.614Z</updated>
+  <id>https://www.muyiio.com/</id>
   
   <author>
     <name>Tyzhao</name>
@@ -17,11 +17,445 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>C++学习笔记整理</title>
+    <link href="https://www.muyiio.com/2020/04/13/c-xue-xi-bi-ji-zheng-li/"/>
+    <id>https://www.muyiio.com/2020/04/13/c-xue-xi-bi-ji-zheng-li/</id>
+    <published>2020-04-13T13:23:54.000Z</published>
+    <updated>2020-04-17T03:09:59.614Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;前面几章大体上和C差不多，就从函数开始吧。&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&quot;第三章-函数&quot;&gt;&lt;a href=&quot;#第三章-函数&quot; class=&quot;headerlink&quot; title=&quot;第三章 函数&quot;&gt;&lt;/a&gt;第三章 函数&lt;/h1&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="C++" scheme="https://www.muyiio.com/categories/C/"/>
+    
+    
+      <category term="学习笔记" scheme="https://www.muyiio.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客部署到腾讯云服务器(使用宝塔面板)</title>
+    <link href="https://www.muyiio.com/2020/04/10/shi-yong-bao-ta-mian-ban-yi-jian-bu-shu-hexo-bo-ke/"/>
+    <id>https://www.muyiio.com/2020/04/10/shi-yong-bao-ta-mian-ban-yi-jian-bu-shu-hexo-bo-ke/</id>
+    <published>2020-04-10T09:13:54.000Z</published>
+    <updated>2020-04-16T15:53:37.527Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;前两天突然发现网站挂了，因为Coding和GitHub同时故障。于是我的博客也进不去！虽然博客也部署在服务器，但是没有开启HTTPS,也没有部署证书。所以就想用宝塔面板来部署博客。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;使用宝塔面板的好处：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;l
+        
+      
+    
+    </summary>
+    
+      <category term="服务器" scheme="https://www.muyiio.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    
+      <category term="Hexo" scheme="https://www.muyiio.com/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客提交百度收录SEO</title>
+    <link href="https://www.muyiio.com/2020/04/07/hexo-bo-ke-ti-jiao-bai-du-shou-lu-seo/"/>
+    <id>https://www.muyiio.com/2020/04/07/hexo-bo-ke-ti-jiao-bai-du-shou-lu-seo/</id>
+    <published>2020-04-07T15:27:53.000Z</published>
+    <updated>2020-04-10T09:17:40.004Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1】前言&quot;&gt;&lt;a href=&quot;#1】前言&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://www.muyiio.com/categories/Blog/"/>
+    
+    
+      <category term="Hexo" scheme="https://www.muyiio.com/tags/Hexo/"/>
+    
+      <category term="SEO" scheme="https://www.muyiio.com/tags/SEO/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用GitHub备份Hexo博客源文件</title>
+    <link href="https://www.muyiio.com/2020/04/07/shi-yong-github-bei-fen-hexo-bo-ke-yuan-wen-jian/"/>
+    <id>https://www.muyiio.com/2020/04/07/shi-yong-github-bei-fen-hexo-bo-ke-yuan-wen-jian/</id>
+    <published>2020-04-07T07:52:42.000Z</published>
+    <updated>2020-04-07T15:23:38.669Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;可能有的小伙伴认为备份不就创建一个仓库多简单；或者说我将Hexo博客源文件拷贝到U盘不就可以了吗，可是你写一篇文章或者更新一次配置就要拷贝一次不是很麻烦吗？&lt;/p&gt;
+&lt;p&gt;备份博客源文件的好处：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;如果电脑突然罢工，我们的源文件也不会丢失。&lt;/
+        
+      
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://www.muyiio.com/categories/Blog/"/>
+    
+    
+      <category term="Github" scheme="https://www.muyiio.com/tags/Github/"/>
+    
+      <category term="Hexo" scheme="https://www.muyiio.com/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo 博客代码块样式美化</title>
+    <link href="https://www.muyiio.com/2020/04/03/hexo-bo-ke-dai-ma-kuai-yang-shi-mei-hua/"/>
+    <id>https://www.muyiio.com/2020/04/03/hexo-bo-ke-dai-ma-kuai-yang-shi-mei-hua/</id>
+    <published>2020-04-03T12:26:29.000Z</published>
+    <updated>2020-04-04T16:15:39.428Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;下面的代码放置位置基于matery主题，不同的主题可能存在一些差异，但也相差无几，自己琢磨琢磨;另外，如果原有关于代码块配置代码，请删掉，不然可能会发生冲突导致无法展示效果。&lt;/p&gt;
+&lt;h2 id=&quot;1】预览&quot;&gt;&lt;a href=&quot;#1】预览&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://www.muyiio.com/categories/Blog/"/>
+    
+    
+      <category term="Hexo" scheme="https://www.muyiio.com/tags/Hexo/"/>
+    
+      <category term="Code" scheme="https://www.muyiio.com/tags/Code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux网络设置-CentOS由NAT模式改为桥接模式</title>
+    <link href="https://www.muyiio.com/2020/04/02/linux-wang-luo-she-zhi-centos-you-nat-mo-shi-gai-wei-qiao-jie-mo-shi/"/>
+    <id>https://www.muyiio.com/2020/04/02/linux-wang-luo-she-zhi-centos-you-nat-mo-shi-gai-wei-qiao-jie-mo-shi/</id>
+    <published>2020-04-02T11:09:28.000Z</published>
+    <updated>2020-04-03T10:36:38.287Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Linux版本：&lt;code&gt;CentOS&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;CentOS发行版本：&lt;code&gt;CentOS 8.1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;虚拟机：&lt;code&gt;VMware&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;在前面CentOS
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://www.muyiio.com/categories/Linux/"/>
+    
+    
+      <category term="CentOS" scheme="https://www.muyiio.com/tags/CentOS/"/>
+    
+      <category term="NAT" scheme="https://www.muyiio.com/tags/NAT/"/>
+    
+      <category term="Bridged" scheme="https://www.muyiio.com/tags/Bridged/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux学习笔记-Vim编辑器</title>
+    <link href="https://www.muyiio.com/2020/03/31/linux-xue-xi-bi-ji-vim-bian-ji-qi/"/>
+    <id>https://www.muyiio.com/2020/03/31/linux-xue-xi-bi-ji-vim-bian-ji-qi/</id>
+    <published>2020-03-31T10:41:54.000Z</published>
+    <updated>2020-03-31T17:11:37.693Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;我的Linux版本：&lt;code&gt;CentOS&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;发行版本：&lt;code&gt;CentOS
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://www.muyiio.com/categories/Linux/"/>
+    
+    
+      <category term="CentOS 8.1" scheme="https://www.muyiio.com/tags/CentOS-8-1/"/>
+    
+      <category term="Vim" scheme="https://www.muyiio.com/tags/Vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo 博客部署到腾讯云服务器</title>
+    <link href="https://www.muyiio.com/2020/03/28/hexo-bo-ke-bu-shu-dao-teng-xun-yun-fu-wu-qi/"/>
+    <id>https://www.muyiio.com/2020/03/28/hexo-bo-ke-bu-shu-dao-teng-xun-yun-fu-wu-qi/</id>
+    <published>2020-03-28T12:47:51.000Z</published>
+    <updated>2020-04-13T01:46:57.641Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="服务器" scheme="https://www.muyiio.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    
+      <category term="Hexo" scheme="https://www.muyiio.com/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 PicGo+腾讯云对象存储COS 作为图床</title>
+    <link href="https://www.muyiio.com/2020/03/27/shi-yong-picgo-teng-xun-yun-dui-xiang-cun-chu-cos-zuo-wei-tu-chuang/"/>
+    <id>https://www.muyiio.com/2020/03/27/shi-yong-picgo-teng-xun-yun-dui-xiang-cun-chu-cos-zuo-wei-tu-chuang/</id>
+    <published>2020-03-27T13:34:21.000Z</published>
+    <updated>2020-03-28T06:22:54.821Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;随着博客文章的增加，网站的访问速度也变慢了，尤其是图片使用比较多的文章，在本地还得一张一张添加，更新到&lt;font color=&quot;red&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="图床" scheme="https://www.muyiio.com/categories/%E5%9B%BE%E5%BA%8A/"/>
+    
+    
+      <category term="PicGo" scheme="https://www.muyiio.com/tags/PicGo/"/>
+    
+      <category term="COS" scheme="https://www.muyiio.com/tags/COS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>对 Hexo 博客文章进行加密</title>
+    <link href="https://www.muyiio.com/2020/03/12/dui-hexo-bo-ke-wen-zhang-jin-xing-jia-mi/"/>
+    <id>https://www.muyiio.com/2020/03/12/dui-hexo-bo-ke-wen-zhang-jin-xing-jia-mi/</id>
+    <published>2020-03-12T02:20:37.000Z</published>
+    <updated>2020-03-15T01:59:08.977Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://www.muyiio.com/categories/Blog/"/>
+    
+    
+      <category term="Hexo" scheme="https://www.muyiio.com/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VMware 安装 CentOS 8.1 完整教程 </title>
+    <link href="https://www.muyiio.com/2020/03/05/vmware-an-zhuang-centos-8-1-wan-zheng-jiao-cheng/"/>
+    <id>https://www.muyiio.com/2020/03/05/vmware-an-zhuang-centos-8-1-wan-zheng-jiao-cheng/</id>
+    <published>2020-03-05T10:29:16.000Z</published>
+    <updated>2020-03-28T07:16:27.481Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;我使用的&lt;font color=&quot;red&quot; size=&quot;3&quot;&gt;VMware&lt;/font&gt;版本：&lt;font color=&quot;red&quot; size=&quot;3&quot;&gt;VMware 15 Pro&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;镜像：&lt;font color=&quot;red&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://www.muyiio.com/categories/Linux/"/>
+    
+    
+      <category term="CentOS" scheme="https://www.muyiio.com/tags/CentOS/"/>
+    
+      <category term="VMware" scheme="https://www.muyiio.com/tags/VMware/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>利用 Github 和 Coding 为 Hexo 博客开启 Https</title>
+    <link href="https://www.muyiio.com/2020/02/24/li-yong-github-he-coding-wei-hexo-bo-ke-kai-qi-https/"/>
+    <id>https://www.muyiio.com/2020/02/24/li-yong-github-he-coding-wei-hexo-bo-ke-kai-qi-https/</id>
+    <published>2020-02-24T13:33:26.000Z</published>
+    <updated>2020-03-28T07:00:11.186Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;本文记录使用&lt;font color=&quot;red&quot; size=&quot;3&quot;&gt;Github&lt;/font&gt;和&lt;font color=&quot;red&quot; size=&quot;3&quot;&gt;Coding&lt;/font&gt;官方支持为我们的&lt;font color=&quot;red&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://www.muyiio.com/categories/Blog/"/>
+    
+    
+      <category term="Hexo" scheme="https://www.muyiio.com/tags/Hexo/"/>
+    
+      <category term="Https" scheme="https://www.muyiio.com/tags/Https/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo-个人博客之博客实用功能添加</title>
+    <link href="https://www.muyiio.com/2020/02/24/hexo-ge-ren-bo-ke-zhi-bo-ke-shi-yong-gong-neng-tian-jia/"/>
+    <id>https://www.muyiio.com/2020/02/24/hexo-ge-ren-bo-ke-zhi-bo-ke-shi-yong-gong-neng-tian-jia/</id>
+    <published>2020-02-24T13:25:20.000Z</published>
+    <updated>2020-04-17T04:53:23.931Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;本文以作者&lt;a href=&quot;https://github.com/blinkfox&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;blinkfox&lt;/a&gt;的&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://www.muyiio.com/categories/Blog/"/>
+    
+    
+      <category term="Hexo" scheme="https://www.muyiio.com/tags/Hexo/"/>
+    
+      <category term="GitHub" scheme="https://www.muyiio.com/tags/GitHub/"/>
+    
+      <category term="博客优化" scheme="https://www.muyiio.com/tags/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo-个人之博客主题美化</title>
+    <link href="https://www.muyiio.com/2020/02/23/hexo-ge-ren-bo-ke-zhi-bo-ke-zhu-ti-mei-hua/"/>
+    <id>https://www.muyiio.com/2020/02/23/hexo-ge-ren-bo-ke-zhi-bo-ke-zhu-ti-mei-hua/</id>
+    <published>2020-02-23T06:45:36.000Z</published>
+    <updated>2020-04-17T05:08:51.531Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;本文以作者&lt;a href=&quot;https://github.com/blinkfox&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;blinkfox&lt;/a&gt;的&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://www.muyiio.com/categories/Blog/"/>
+    
+    
+      <category term="Github" scheme="https://www.muyiio.com/tags/Github/"/>
+    
+      <category term="Hexo" scheme="https://www.muyiio.com/tags/Hexo/"/>
+    
+      <category term="博客美化" scheme="https://www.muyiio.com/tags/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo 双线部署到 Coding Pages 和 GitHub Pages 提升访问速度</title>
+    <link href="https://www.muyiio.com/2020/02/20/hexo-shuang-xian-bu-shu-dao-coding-pages-he-github-pages-ti-sheng-fang-wen-su-du/"/>
+    <id>https://www.muyiio.com/2020/02/20/hexo-shuang-xian-bu-shu-dao-coding-pages-he-github-pages-ti-sheng-fang-wen-su-du/</id>
+    <published>2020-02-20T15:15:24.000Z</published>
+    <updated>2020-03-30T02:30:57.488Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;font color=&quot;magenta&quot; size=&quot;4&quot;&gt;&lt;strong&gt;在操作过程中遇到问题欢迎来骚扰我哈！&lt;font color=&quot;red&quot; size=&quot;4&quot;&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://www.muyiio.com/categories/Blog/"/>
+    
+    
+      <category term="Hexo" scheme="https://www.muyiio.com/tags/Hexo/"/>
+    
+      <category term="Coding" scheme="https://www.muyiio.com/tags/Coding/"/>
+    
+      <category term="HTTPS" scheme="https://www.muyiio.com/tags/HTTPS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Github + Hexo 搭建个人博客超详细教程</title>
-    <link href="https://muyiio.com/2020/02/18/1/"/>
-    <id>https://muyiio.com/2020/02/18/1/</id>
+    <link href="https://www.muyiio.com/2020/02/18/1/"/>
+    <id>https://www.muyiio.com/2020/02/18/1/</id>
     <published>2020-02-18T13:17:35.000Z</published>
-    <updated>2020-03-28T06:44:50.392Z</updated>
+    <updated>2020-04-07T11:16:38.646Z</updated>
     
     <summary type="html">
     
@@ -36,14 +470,40 @@
     
     </summary>
     
-      <category term="Blog" scheme="https://muyiio.com/categories/Blog/"/>
+      <category term="Blog" scheme="https://www.muyiio.com/categories/Blog/"/>
     
     
-      <category term="Github" scheme="https://muyiio.com/tags/Github/"/>
+      <category term="Github" scheme="https://www.muyiio.com/tags/Github/"/>
     
-      <category term="Hexo" scheme="https://muyiio.com/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://www.muyiio.com/tags/Hexo/"/>
     
-      <category term="博客搭建" scheme="https://muyiio.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+      <category term="博客搭建" scheme="https://www.muyiio.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2019总结及2020规划</title>
+    <link href="https://www.muyiio.com/2020/01/17/2019-zong-jie-ji-2020-gui-hua/"/>
+    <id>https://www.muyiio.com/2020/01/17/2019-zong-jie-ji-2020-gui-hua/</id>
+    <published>2020-01-16T16:17:54.000Z</published>
+    <updated>2020-03-28T06:47:11.232Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;530&quot; height=&quot;86&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://www.muyiio.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="https://www.muyiio.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
