@@ -4,16 +4,13 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="对 Hexo 博客文章进行加密, 操作系统的编译原理与实现">
+    <meta name="keywords" content="C++编程题目整合, 操作系统的编译原理与实现">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="写在前面
-有时候我们可能需要写一些私密的博客，通过密码验证的方式让人不能随意浏览。
-
-这在wordpress，emlog或其他博客系统中都很容易实现，然而hexo除外。:(
-
-为了解决这个问题，我们需要安装“ hexo-blog-encry">
+    <meta name="description" content="就从第四章类与对象开始吧，前面的章节和c差不多。
+1.点类定义和使用【问题描述】
+定义一个点类，该类包含整形坐标x,y以及用于设置坐标值的函数，名为setxy（）参数自行确定，以及用于显示坐标的函数displayxy()参数自行设置。合理编">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +18,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>对 Hexo 博客文章进行加密 | Tyzhao`s Blog</title>
+    <title>C++编程题目整合 | Tyzhao`s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -590,13 +587,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/37.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        对 Hexo 博客文章进行加密
+                        C++编程题目整合
                     </div>
                 </div>
             </div>
@@ -707,8 +704,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/Hexo/" target="_blank">
-                            <span class="chip bg-color">Hexo</span>
+                        <a href="/tags/学习笔记/" target="_blank">
+                            <span class="chip bg-color">学习笔记</span>
                         </a>
                         
                     </div>
@@ -719,8 +716,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/Blog/" class="post-category" target="_blank">
-                            Blog
+                        <a href="/categories/C/" class="post-category" target="_blank">
+                            C++
                         </a>
                         
                     </div>
@@ -731,7 +728,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-12
+                    2020-04-26
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -745,14 +742,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    640
+                    219
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
                 
@@ -768,86 +765,440 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><ul>
-<li><p>有时候我们可能需要写一些私密的博客，通过密码验证的方式让人不能随意浏览。</p>
-</li>
-<li><p>这在wordpress，emlog或其他博客系统中都很容易实现，然而hexo除外。:(</p>
-</li>
-<li><p>为了解决这个问题，我们需要安装“ hexo-blog-encrypt”扩展。</p>
-</li>
-</ul>
-<h1 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h1><ul>
-<li><p>一旦你输入了正确的密码，它就会被存储在本地浏览器的localStorage中。按个按钮，密码将会被清空。若博客中又脚本，它将被正确地执行。</p>
-</li>
-<li><p>支持按标签加密。</p>
-</li>
-<li><p>所有的核心功能都是由原生的API所提供的。在Node.js中，我们使用Crypto。在浏览器中，我们使用Web Crypto API。</p>
-</li>
-<li><p>PBKDF2，SHA256被用作复制密钥，AES256-CBC被用作加解密，我们还使用HMAC来验证密文的来源，并确保其纠正。</p>
-</li>
-<li><p>广泛地使用Promise来进行异步操作，从而确保线程不被杜塞。</p>
-</li>
-<li><p>过时的浏览器将无法正常显示，因此，请升级您的浏览器。</p>
-</li>
-</ul>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><pre class="line-numbers language-javascriptj"><code class="language-javascriptj">npm install --save hexo-blog-encrypt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h1 id="快速使用"><a href="#快速使用" class="headerlink" title="快速使用"></a>快速使用</h1><ul>
-<li><strong>将“ <font color="red" size="3">password</font>”添加到您的文章信息头就像这样</strong>：</li>
-</ul>
-<pre><code>```javascriptj
-title: Hello World
-date: 2020-03-13 21:12:21
-password: muyiio
----
-```</code></pre><h1 id="按标签加密"><a href="#按标签加密" class="headerlink" title="按标签加密"></a>按标签加密</h1><ul>
-<li><strong>修改文章信息头如下：</strong></li>
-</ul>
-<pre class="line-numbers language-java"><code class="language-java">title<span class="token operator">:</span> Hello World
-tags<span class="token operator">:</span>
-<span class="token operator">-</span> 加密文章tag
-date<span class="token operator">:</span> <span class="token number">2020</span><span class="token operator">-</span><span class="token number">03</span><span class="token operator">-</span><span class="token number">13</span> <span class="token number">21</span><span class="token operator">:</span><span class="token number">12</span><span class="token operator">:</span><span class="token number">21</span>
-password<span class="token operator">:</span> muyiio
-<span class="token keyword">abstract</span><span class="token operator">:</span> 这里有东西被加密了，需要输入密码查看哦。
-message<span class="token operator">:</span> 您好，这里需要密码。
-wrong_pass_message<span class="token operator">:</span> 抱歉，这个密码看着不太对，请再试试。
-wrong_hash_message<span class="token operator">:</span> 抱歉，这个文章不能被纠正，不过您还是能看看解密后的内容。
-<span class="token operator">--</span><span class="token operator">-</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<ul>
-<li><strong>对博客根目录<font color="red" size="3">_config</font>添加如下字段：</strong></li>
-</ul>
-<pre class="line-numbers language-javascriptj"><code class="language-javascriptj"># 安全
-encrypt: # hexo-blog-encrypt
-  abstract: 这里有东西被加密了，需要输入密码查看哦。
-  message: 您好, 这里需要密码.
-  tags:
-  - {name: tagName, password: 密码A}
-  - {name: tagName, password: 密码B}
-  template: <div id="hexo-blog-encrypt" data-wpm="{{hbeWrongPassMessage}}" data-whm="{{hbeWrongHashMessage}}"><div class="hbe-input-container"><input type="password" id="hbePass" placeholder="{{hbeMessage}}" /><label>{{hbeMessage}}</label><div class="bottom-line"></div></div><script id="hbeData" type="hbeData" data-hmacdigest="{{hbeHmacDigest}}">{{hbeEncryptedData}}</script></div>
-  wrong_pass_message: 抱歉, 这个密码看着不太对, 请再试试.
-  wrong_hash_message: 抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h1 id="对-TOC-文章进行加密"><a href="#对-TOC-文章进行加密" class="headerlink" title="对 TOC 文章进行加密"></a>对 TOC 文章进行加密</h1><p>如果您有一篇文章使用了<font color="red" size="3">TOC</font>，您需要修改模板的部分代码。这里以<font color="red" size="3">matery</font>主题作为示例：</p>
-<ul>
-<li><p><strong>在<font color="red" size="3">hexo/themes/matery/layout/_partial/article.ejs</font>找到<font color="red" size="3">article.ejs</font>。</strong></p>
-</li>
-<li><p><strong>然后找到<font color="red" size="3">&lt;％post.content％&gt;</font>这段代码，通常在<font color="red" size="3">30</font>行左右。</strong></p>
-</li>
-<li><p><strong>使用如下的代码来替代它：</strong></p>
-</li>
-</ul>
-<pre class="line-numbers language-javascriptj"><code class="language-javascriptj"><% if(post.toc == true){ %>
-  <div id="toc-div" class="toc-article" <% if (post.encrypt == true) { %>style="display:none" <% } %>>
-    <strong class="toc-title">Index</strong>
-      <% if (post.encrypt == true) { %>
-        <%- toc(post.origin, {list_number: true}) %>
-      <% } else { %>
-        <%- toc(post.content, {list_number: true}) %>
-      <% } %>
-  </div>
-<% } %>
-<%- post.content %><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>本文转载自作者<a href="https://github.com/MikeCoder/hexo-blog-encrypt" target="_blank" rel="noopener">MikeCoder</a>的<font color="red" size="3">hexo-blog-encrypt</font>项目，对有些地方略有修改。</p>
-<p>项目地址：<a href="https://github.com/MikeCoder/hexo-blog-encrypt" target="_blank" rel="noopener">https://github.com/MikeCoder/hexo-blog-encrypt</a></p>
-<p>发现这个还是挺好玩的~</p>
+                <p><strong>就从第四章类与对象开始吧，前面的章节和c差不多。</strong></p>
+<h3 id="1-点类定义和使用"><a href="#1-点类定义和使用" class="headerlink" title="1.点类定义和使用"></a>1.点类定义和使用</h3><p><strong>【问题描述】</strong></p>
+<p>定义一个点类，该类包含整形坐标x,y以及用于设置坐标值的函数，名为setxy（）参数自行确定，以及用于显示坐标的函数displayxy()参数自行设置。合理编写主函数，能够实现（3，4）以及（5，6）固定两个点对象的参数设置，以及信息输出</p>
+<p><strong>【输入形式】</strong></p>
+<p>无数据输入，请一定使用类的定义以及对象的创建的相关知识</p>
+<p><strong>【输出形式】</strong></p>
+<p>输出两个固定点的相关信息</p>
+<p><strong>【样例输入】</strong></p>
+<p><strong>【样例输出】</strong></p>
+<p>The first point is:(3,4)</p>
+<p>The second point is:(5,6)</p>
+<pre class="line-numbers language-c++"><code class="language-c++">#include<iostream>
+using namespace std;
+class Point {
+    public:
+              Point(int a,int b) 
+              {     x=a;
+                  y=b;
+            } 
+          void setxy(int a,int b)
+          {
+                x=a;
+                y=b;
+          }
+                  void display()
+         {
+             cout<<"The first point is"<<":"<<"("<<x<<","<<y<<")"<<endl;
+             //cout<<"The second point is"<<":"<<"("<<5<<","<<6<<")"<<endl;
+         }
+    private: 
+        int x,y;
+};
+int main()
+{
+    //int a,b,c,d;
+    Point s1(3,4);
+    Point s2(5,6);
+    //s.setxy(3,4);
+    //s.display();
+    //s.setxy(5,6);
+    s1.display();
+    s2.display();
+    return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h3 id="2-三角形类"><a href="#2-三角形类" class="headerlink" title="2.三角形类"></a>2.三角形类</h3><p><strong>【问题描述】</strong></p>
+<p>定义一个描述三角形的类Tri，其具体要求为：  </p>
+<p>（1）私有数据成员为三角形的三边 </p>
+<p> （2）公有成员函数      构造函数：用以初始化指定的三角形对象；求三角形的边长的成员函数；求三角形面积的成员函数；输出三角形各种参数的成员函数即用以输出三角形对象的边长、周长和面积。</p>
+<p><strong>【输入形式】</strong></p>
+<p>输入三角形的三边长 【输出形式】若构成三角形，输出三角形的边长、周长及面积，否则输出“不构成三角形!” </p>
+<p><strong>【样例输入1】</strong></p>
+<p>  3 4 5 </p>
+<p><strong>【样例输出1】</strong>    </p>
+<p>三角形的边长:3 4 5  三角形的周长:12  三角形的面积:6</p>
+<p><strong>【样例输入1】</strong> </p>
+<p> 1 2 3 </p>
+<p><strong>【样例输出1】</strong>   </p>
+<p> 不构成三角形!</p>
+<pre class="line-numbers language-c++"><code class="language-c++">#include<iostream>
+#include<math.h>
+using namespace std; 
+
+class Tri
+{
+        double a,b,c;  //定义三角形的三边
+    public:
+        Tri(double x, double y, double z) //构造函数，初始化三边
+        {        a=x; b=y;c=z;        }
+
+        double Peri()  //返回三角形的周长
+        {        return (a+b+c);        }
+
+        double Area()  //返回三角形的面积
+        {    double s=Peri()/2;
+            double area=sqrt(s*(s-a)*(s-b)*(s-c));
+            return area;
+        }
+
+        void Show() //输出三角形的参数
+        {    cout<<"三角形的边长:"<<a<<' '<<b<<' '<<c<<endl;
+            cout<<"三角形的周长:"<<Peri()<<endl;
+            cout<<"三角形的面积:"<<Area()<<endl<<endl;
+        }
+
+};//三角形类的定义结束，定义了三角形的各种属性和可实施的操作
+
+int main()
+{    double x,y,z;
+    cin>>x>>y>>z;
+    Tri tri(x,y,z);
+
+    if(x+y>z&&y+z>x&&x+z>y)
+        tri.Show();  //输出这两个三角形的参数
+    else
+        cout<<"不构成三角形!"<<endl;
+
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h3 id="3-设计一个Time类"><a href="#3-设计一个Time类" class="headerlink" title="3.设计一个Time类"></a>3.设计一个Time类</h3><p><strong>【问题描述】</strong></p>
+<p>定义了一个以hours, minutes和seconds作为数据成员的Time类。设计了成员函数将两个Time对象相加（即时间相加），并进行相应的检查，查看增加的分钟数及秒数是否大于59。如果秒数大于59，则分钟数向前递增1。类似地，如果分钟数大于59，则小时数向前增1。</p>
+<p><strong>【输入形式】</strong></p>
+<p>输入两个由时、分、秒构成的时间。 </p>
+<p><strong>【输出形式】</strong></p>
+<p>输出输入的两个时间相加后的时间</p>
+<p> <strong>【样例输入】</strong></p>
+<p>  2 34 45  1 47 56</p>
+<p><strong>【样例输出】</strong></p>
+<p>  the result is:4:22:41</p>
+<p><strong>【样例输入】</strong></p>
+<p>​    2 67 100  1 56 200</p>
+<p><strong>【样例输出】</strong></p>
+<p>  the result is:5:8:0</p>
+<pre class="line-numbers language-c++"><code class="language-c++">#include<iostream>
+using namespace std; 
+
+class Time
+{
+    private:
+          int hours, minutes, seconds;
+    public:
+        void get_time()
+        {
+            cin>>hours>>minutes>>seconds;
+        }
+
+        void display_time()
+        {
+            cout<<hours<<':'<<minutes<<':'<<seconds<<endl;
+        }
+
+        void add_time(Time & t1, Time & t2)
+        {    int tmp; 
+            hours=t1.hours+t2.hours;
+            minutes=t1.minutes+t2.minutes;
+            seconds=t1.seconds+t2.seconds;
+            if(seconds>=60)
+            {  tmp=seconds/60;
+               seconds-=tmp*60;
+               minutes=minutes+tmp;
+            }
+            if(minutes>=60)
+            {  tmp=minutes/60;
+               minutes-=tmp*60;
+               hours=hours+tmp;
+            }
+        }
+};
+
+int main()
+{
+       Time one, two, three;
+       //cout<<"Enter the first time(hours minutes seconds):";
+       one.get_time();
+       //cout<<"Enter the second time(hours minutes seconds):";
+       two.get_time();
+       three.add_time(one,two);
+       cout<<"the result is:";
+       three.display_time();
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h3 id="4-datatype-数据类型-类"><a href="#4-datatype-数据类型-类" class="headerlink" title="4.datatype(数据类型)类"></a>4.datatype(数据类型)类</h3><p><strong>【问题描述】</strong></p>
+<p>声明一个datatype(数据类型)类，该类能够根据用户的输入，确定输入的数据类型，能处理包含字符型、整形、浮点型3种类型的数据，并给出合理的输出。提示：需要进行构造函数的重载</p>
+<p><strong>【输入形式】</strong></p>
+<p>给用户选择，当输入1时，选择输入整型；输入2时，输入字符型；选择3时，输入浮点型。不考虑其他错误情况</p>
+<p><strong>【输出形式】</strong></p>
+<p>输入该数据以及该数据的类型</p>
+<p><strong>【样例输入1】</strong></p>
+<p>2c</p>
+<p><strong>【样例输出1】</strong></p>
+<p>character:c</p>
+<p><strong>【样例输入2】</strong></p>
+<p>112</p>
+<p><strong>【样例输出2】</strong></p>
+<p>int:12</p>
+<p><strong>【样例输入3】</strong></p>
+<p>31.44F</p>
+<p><strong>【样例输出3】</strong></p>
+<p>float:1.44</p>
+<pre class="line-numbers language-c++"><code class="language-c++">#include <iostream>
+using namespace std;
+
+class DataType{
+    enum
+    {
+        character,
+        integer,
+        floating_point
+    } vartype;
+    union 
+    {
+        char c;
+        int i;
+        float f;
+    };
+    public:
+        DataType(char ch) 
+        {
+            vartype = character;
+            c = ch;
+        }
+
+        DataType(int ii) 
+        {
+            vartype = integer;
+            i = ii;
+        }
+
+        DataType(float ff) 
+        {
+            vartype = floating_point;
+            f = ff;
+        }
+        void print();
+};
+
+void DataType::print() 
+{
+    switch (vartype) 
+    {
+        case character:
+            cout << "字符型: " << c << endl;
+            break;
+        case integer:
+            cout << "整型: " << i << endl;
+            break;
+        case floating_point:
+            cout << "浮点型: " << f << endl;
+            break;
+    }
+}
+
+int main() 
+{    DataType a('c'), b(12), c(1.44F);
+    a.print();
+    b.print();
+    c.print();
+    return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h3 id="5-复数类Complex"><a href="#5-复数类Complex" class="headerlink" title="5.复数类Complex"></a>5.复数类Complex</h3><p><strong>【问题描述】</strong></p>
+<p>定义一个复数类，使得下面的代码能够工作：    </p>
+<p>Complex c1(3,5);   </p>
+<p> Complex c2=4.5;   </p>
+<p> c1.add(c2);    </p>
+<p> c1.show(); </p>
+<p><strong>【输入形式】</strong></p>
+<p>无 </p>
+<p><strong>【输出形式】</strong> </p>
+<p>c1=3 + 5i </p>
+<p>c2=4.5 + 0i  </p>
+<p>c1+c2=7.5 + 5i</p>
+<pre class="line-numbers language-c++"><code class="language-c++">#include <iostream>
+using namespace std;
+
+class Complex {
+    public:
+        Complex(double r, double i) :real(r), image(i) { }
+        Complex(double r) :real(r), image(0) {}
+        void show();
+        void add(Complex c2);
+
+    private:
+        double real;
+        double image;
+};
+void Complex::add(Complex c2) {
+    real += c2.real;
+    image += c2.image;
+}
+
+void Complex::show() {
+    cout << real << "+";
+    cout << image << "i";
+    cout << endl;
+}
+
+int main() {
+    Complex c1(3, 5);
+    Complex c2=4.5;
+    cout<<"c1=";
+    c1.show();
+    cout<<"c2=";
+    c2.show();
+    c1.add(c2);
+    cout<<"c1+c2=";
+    c1.show();
+    return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h3 id="6-计算由圆和正方形构成的阴影部分的面积"><a href="#6-计算由圆和正方形构成的阴影部分的面积" class="headerlink" title="6.计算由圆和正方形构成的阴影部分的面积"></a>6.计算由圆和正方形构成的阴影部分的面积</h3><p><strong>【问题描述】</strong></p>
+<p>定义一个圆形类，属性有半径和相应的成员函数。然后定义一个正方形类，属性有边长和相应的成员函数。再编写一个如下图所示的组合类，由一个正方型和一个圆形组成，要求该组合类能求出阴影部分面积和周长。</p>
+<p><img src="http://jsjjs.ctbu.edu.cn/userfiles/image/2020/1586088754215004939.png" alt="image.png"></p>
+<p><strong>【输入形式】</strong></p>
+<p>无 </p>
+<p><strong>【输出形式】</strong> </p>
+<p> 自定义图形的面积49.2656  自定义图形的周长29.1328  自定义图形的面积109.098  自定义图形的周长45.6992</p>
+<pre class="line-numbers language-c++"><code class="language-c++">#include <iostream>
+using namespace std; 
+
+const double  PI=3.1416;
+/**********Program**********/
+class Box  //正方形类 
+{
+    private:
+        int A;
+    public:
+        Box( ){ }  //默认构造函数 
+        Box(int x){    A=x;}  //构造函数 
+        void set(double a){ A=a;}  //设置边长 
+        double S(){    return A*A;    }  //求面积 
+        double BL(){    return 4*A;    }  //求周长 
+};
+
+class circle  //圆类 
+{
+    private:
+        int B;
+    public:
+          circle( ){ }; //默认构造函数 
+        circle(int x){B=x;} //构造函数
+        void set(double b){ B=b;} //设置半径
+        double CL(){    return 2*PI*B;    } //求周长 
+        double S(){ return PI*B*B;}   //求面积
+};
+
+class NewStyle  //组合类 
+{
+    private:
+        circle A;
+        Box B;
+    public:
+        NewStyle( ) {} //默认构造函数
+        NewStyle(circle x,Box y):A(x),B(y){}  //构造函数
+        void set(circle x,Box y){ A=x;B=y;}  //设置组合图形 
+        double S(){    return A.S()-B.S();}     //求面积
+        double L(){    return A.CL()+B.BL();};  //求周长
+} ; 
+/**********  End  **********/
+
+int main()
+{
+    circle A(4);  //圆的半径为4
+    Box B(1);   //正方形的边长为1
+    NewStyle C(A,B);  
+    cout<<"自定义图形的面积"<<C.S()<<endl; 
+    cout<<"自定义图形的周长"<<C.L()<<endl; 
+    A.set(6);   //圆的半径变为6
+    B.set(2);   //正方形的边长变为2
+    C.set(A,B);
+    cout<<"自定义图形的面积"<<C.S()<<endl; 
+    cout<<"自定义图形的周长"<<C.L()<<endl; 
+    return 0;
+}  
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h3 id="7-CPU类"><a href="#7-CPU类" class="headerlink" title="7.CPU类"></a>7.CPU类</h3><p><strong>【问题描述】</strong></p>
+<p>声明一个CPU类。包含等级(rank)、频率(frequency)、电压(voltage)等属性，有两个公有成员函数run、stop，分别提示“CPU开始运行!”和“CPU停止运行!”。其中，rank为枚举类型CPU_Rank，声明为enum CPU_Rank{ P1=1, P2, P3, P4, P5, P6, P7 }; frequency为单位是MHz的整型数，voltage为浮点型的电压值。用2个CPU对象进行测试观察构造函数和析构函数的调用顺序。</p>
+<p><strong>【输入形式】</strong></p>
+<p>输入CPU的等级，1表示P1，3代表P3</p>
+<p><strong>【输出形式】</strong></p>
+<p>CPU对象的相关信息：构造函数、析构函数的调用情况，CPU对象的运行状况及CPU的等级</p>
+<p><strong>【样例输入1】</strong></p>
+<p>  2 5 </p>
+<p><strong>【样例输出1】</strong> </p>
+<p> 构造了一个CPU! </p>
+<p> 构造了一个CPU! </p>
+<p> CPU开始运行! </p>
+<p> 等级为:2  </p>
+<p>CPU停止运行!</p>
+<p>  CPU开始运行!  </p>
+<p>等级为:5  </p>
+<p>CPU停止运行!</p>
+<p> 析构了一个CPU!  </p>
+<p>析构了一个CPU!</p>
+<p><strong>【样例输入2】</strong> </p>
+<p> 1 7 </p>
+<p><strong>【样例输出2】</strong> </p>
+<p> 构造了一个CPU!  </p>
+<p>构造了一个CPU!  </p>
+<p>CPU开始运行!  </p>
+<p>等级为:1 </p>
+<p> CPU停止运行!  </p>
+<p>CPU开始运行!  </p>
+<p>等级为:7  </p>
+<p>CPU停止运行!  </p>
+<p>析构了一个CPU!  </p>
+<p>析构了一个CPU! </p>
+<pre class="line-numbers language-c++"><code class="language-c++">#include <iostream>
+using namespace std;
+
+enum CPU_Rank {P1=1,P2,P3,P4,P5,P6,P7};
+class CPU
+{
+    private:
+        CPU_Rank rank;
+        int frequency;
+        float voltage;
+    public:
+        CPU (CPU_Rank r, int f, float v)
+        {
+            rank = r;
+            frequency = f;
+            voltage = v;
+            cout << "构造了一个CPU!" << endl;
+        }
+
+        ~CPU () { cout << "析构了一个CPU!" << endl; }
+
+        CPU_Rank GetRank() const { return rank; }
+        int GetFrequency() const { return frequency; }
+        float GetVoltage() const { return voltage; }
+
+        void SetRank(CPU_Rank r) { rank = r; }
+        void SetFrequency(int f) { frequency = f; }
+        void SetVoltage(float v) { voltage = v; }
+
+        void Run() {cout << "CPU开始运行!" << "\n等级为:"<<rank<<endl; }
+        void Stop() {cout << "CPU停止运行!" << endl; }
+};
+
+int main()
+{
+    int r1,r2;
+    cin>>r1>>r2;
+    CPU a((CPU_Rank)r1,300,2.8);
+    CPU b((CPU_Rank)r2,800,8.8);
+    a.Run();
+    a.Stop();
+    b.Run();
+    b.Stop();
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>持续更新中</p>
 
             </div>
             <hr />
@@ -1006,9 +1357,9 @@ encrypt: # hexo-blog-encrypt
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《对 Hexo 博客文章进行加密》
+                    《C++编程题目整合》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/03/12/dui-hexo-bo-ke-wen-zhang-jin-xing-jia-mi/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/04/26/c-bian-cheng-ti-mu-zheng-he/" property="cc:attributionName"
                rel="cc:attributionURL">
                 Tyzhao
             </a> 采用
@@ -1049,7 +1400,7 @@ encrypt: # hexo-blog-encrypt
         repo: 'muyiio.github.io',
         owner: 'MUYIio',
         admin: "MUYIio",
-        id: '2020/03/12/dui-hexo-bo-ke-wen-zhang-jin-xing-jia-mi/',
+        id: '2020/04/26/c-bian-cheng-ti-mu-zheng-he/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1336,31 +1687,31 @@ encrypt: # hexo-blog-encrypt
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/03/27/shi-yong-picgo-teng-xun-yun-dui-xiang-cun-chu-cos-zuo-wei-tu-chuang/">
+                <a href="/2020/04/26/c-xue-xi-bi-ji-zheng-li-lei-yu-dui-xiang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="使用 PicGo+腾讯云对象存储COS 作为图床">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="C++学习笔记整理-类与对象">
                         
-                        <span class="card-title">使用 PicGo+腾讯云对象存储COS 作为图床</span>
+                        <span class="card-title">C++学习笔记整理-类与对象</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            选择PicGo+对象存储COS图床来储存文章图片，优化访问速度也为了更加方便。
+                            抽象是对具体对象（问题）进行概括，抽出这一类对象的公共性质并加以描述的过程.
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-27
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-04-26
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/图床/" class="post-category" target="_blank">
-                                    图床
+                            <a href="/categories/C/" class="post-category" target="_blank">
+                                    C++
                                 </a>
                             
                             
@@ -1370,12 +1721,8 @@ encrypt: # hexo-blog-encrypt
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/PicGo/" target="_blank">
-                        <span class="chip bg-color">PicGo</span>
-                    </a>
-                    
-                    <a href="/tags/COS/" target="_blank">
-                        <span class="chip bg-color">COS</span>
+                    <a href="/tags/学习笔记/" target="_blank">
+                        <span class="chip bg-color">学习笔记</span>
                     </a>
                     
                 </div>
@@ -1389,31 +1736,31 @@ encrypt: # hexo-blog-encrypt
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/03/05/vmware-an-zhuang-centos-8-1-wan-zheng-jiao-cheng/">
+                <a href="/2020/04/23/c-xue-xi-bi-ji-zheng-li-shu-ju-de-gong-xiang-yu-bao-hu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="VMware 安装 CentOS 8.1 完整教程 ">
+                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="C++学习笔记整理-数据的共享与保护">
                         
-                        <span class="card-title">VMware 安装 CentOS 8.1 完整教程 </span>
+                        <span class="card-title">C++学习笔记整理-数据的共享与保护</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            这篇文章详细的记录我安装CentOS 8.1的过程，其他CentOS 8系列的发行版本安装可作参考。
+                            第五章数据的共享与保护,作用域是一个标识符在程序正文中有效的区域。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-05
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-04-23
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Linux/" class="post-category" target="_blank">
-                                    Linux
+                            <a href="/categories/C/" class="post-category" target="_blank">
+                                    C++
                                 </a>
                             
                             
@@ -1423,12 +1770,8 @@ encrypt: # hexo-blog-encrypt
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/CentOS/" target="_blank">
-                        <span class="chip bg-color">CentOS</span>
-                    </a>
-                    
-                    <a href="/tags/VMware/" target="_blank">
-                        <span class="chip bg-color">VMware</span>
+                    <a href="/tags/学习笔记/" target="_blank">
+                        <span class="chip bg-color">学习笔记</span>
                     </a>
                     
                 </div>

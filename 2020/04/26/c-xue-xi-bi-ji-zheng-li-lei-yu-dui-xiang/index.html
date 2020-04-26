@@ -4,16 +4,15 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="对 Hexo 博客文章进行加密, 操作系统的编译原理与实现">
+    <meta name="keywords" content="C++学习笔记整理-类与对象, 操作系统的编译原理与实现">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="写在前面
-有时候我们可能需要写一些私密的博客，通过密码验证的方式让人不能随意浏览。
+    <meta name="description" content="第四章 类和对象1.面向对象程序设计的基本特点①抽象抽象是对具体对象（问题）进行概括，抽出这一类对象的公共性质并加以描述的过程。
 
-这在wordpress，emlog或其他博客系统中都很容易实现，然而hexo除外。:(
+先注意问题的本质及描述，其次是实现过程或细节。
 
-为了解决这个问题，我们需要安装“ hexo-blog-encry">
+数据抽象：描述某类对象的属性或状态（对象相互区别的物理量）">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +20,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>对 Hexo 博客文章进行加密 | Tyzhao`s Blog</title>
+    <title>C++学习笔记整理-类与对象 | Tyzhao`s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -590,13 +589,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/37.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        对 Hexo 博客文章进行加密
+                        C++学习笔记整理-类与对象
                     </div>
                 </div>
             </div>
@@ -707,8 +706,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/Hexo/" target="_blank">
-                            <span class="chip bg-color">Hexo</span>
+                        <a href="/tags/学习笔记/" target="_blank">
+                            <span class="chip bg-color">学习笔记</span>
                         </a>
                         
                     </div>
@@ -719,8 +718,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/Blog/" class="post-category" target="_blank">
-                            Blog
+                        <a href="/categories/C/" class="post-category" target="_blank">
+                            C++
                         </a>
                         
                     </div>
@@ -731,7 +730,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-12
+                    2020-04-26
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -745,14 +744,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    640
+                    1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
                 
@@ -768,86 +767,738 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><ul>
-<li><p>有时候我们可能需要写一些私密的博客，通过密码验证的方式让人不能随意浏览。</p>
-</li>
-<li><p>这在wordpress，emlog或其他博客系统中都很容易实现，然而hexo除外。:(</p>
-</li>
-<li><p>为了解决这个问题，我们需要安装“ hexo-blog-encrypt”扩展。</p>
-</li>
-</ul>
-<h1 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h1><ul>
-<li><p>一旦你输入了正确的密码，它就会被存储在本地浏览器的localStorage中。按个按钮，密码将会被清空。若博客中又脚本，它将被正确地执行。</p>
-</li>
-<li><p>支持按标签加密。</p>
-</li>
-<li><p>所有的核心功能都是由原生的API所提供的。在Node.js中，我们使用Crypto。在浏览器中，我们使用Web Crypto API。</p>
-</li>
-<li><p>PBKDF2，SHA256被用作复制密钥，AES256-CBC被用作加解密，我们还使用HMAC来验证密文的来源，并确保其纠正。</p>
-</li>
-<li><p>广泛地使用Promise来进行异步操作，从而确保线程不被杜塞。</p>
-</li>
-<li><p>过时的浏览器将无法正常显示，因此，请升级您的浏览器。</p>
-</li>
-</ul>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><pre class="line-numbers language-javascriptj"><code class="language-javascriptj">npm install --save hexo-blog-encrypt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h1 id="快速使用"><a href="#快速使用" class="headerlink" title="快速使用"></a>快速使用</h1><ul>
-<li><strong>将“ <font color="red" size="3">password</font>”添加到您的文章信息头就像这样</strong>：</li>
-</ul>
-<pre><code>```javascriptj
-title: Hello World
-date: 2020-03-13 21:12:21
-password: muyiio
----
-```</code></pre><h1 id="按标签加密"><a href="#按标签加密" class="headerlink" title="按标签加密"></a>按标签加密</h1><ul>
-<li><strong>修改文章信息头如下：</strong></li>
-</ul>
-<pre class="line-numbers language-java"><code class="language-java">title<span class="token operator">:</span> Hello World
-tags<span class="token operator">:</span>
-<span class="token operator">-</span> 加密文章tag
-date<span class="token operator">:</span> <span class="token number">2020</span><span class="token operator">-</span><span class="token number">03</span><span class="token operator">-</span><span class="token number">13</span> <span class="token number">21</span><span class="token operator">:</span><span class="token number">12</span><span class="token operator">:</span><span class="token number">21</span>
-password<span class="token operator">:</span> muyiio
-<span class="token keyword">abstract</span><span class="token operator">:</span> 这里有东西被加密了，需要输入密码查看哦。
-message<span class="token operator">:</span> 您好，这里需要密码。
-wrong_pass_message<span class="token operator">:</span> 抱歉，这个密码看着不太对，请再试试。
-wrong_hash_message<span class="token operator">:</span> 抱歉，这个文章不能被纠正，不过您还是能看看解密后的内容。
-<span class="token operator">--</span><span class="token operator">-</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h1 id="第四章-类和对象"><a href="#第四章-类和对象" class="headerlink" title="第四章 类和对象"></a>第四章 类和对象</h1><h2 id="1-面向对象程序设计的基本特点"><a href="#1-面向对象程序设计的基本特点" class="headerlink" title="1.面向对象程序设计的基本特点"></a>1.面向对象程序设计的基本特点</h2><h3 id="①抽象"><a href="#①抽象" class="headerlink" title="①抽象"></a>①抽象</h3><p><strong>抽象是对具体对象（问题）进行概括，抽出这一类对象的公共性质并加以描述的过程。</strong></p>
 <ul>
-<li><strong>对博客根目录<font color="red" size="3">_config</font>添加如下字段：</strong></li>
+<li><p>先注意问题的本质及描述，其次是实现过程或细节。</p>
+</li>
+<li><p>数据抽象：描述某类对象的属性或状态（对象相互区别的物理量）。</p>
+</li>
+<li><p>代码抽象：描述某类对象的共有的行为特征或具有的功能。</p>
+</li>
+<li><p>抽象的实现：通过类的声明。</p>
+</li>
 </ul>
-<pre class="line-numbers language-javascriptj"><code class="language-javascriptj"># 安全
-encrypt: # hexo-blog-encrypt
-  abstract: 这里有东西被加密了，需要输入密码查看哦。
-  message: 您好, 这里需要密码.
-  tags:
-  - {name: tagName, password: 密码A}
-  - {name: tagName, password: 密码B}
-  template: <div id="hexo-blog-encrypt" data-wpm="{{hbeWrongPassMessage}}" data-whm="{{hbeWrongHashMessage}}"><div class="hbe-input-container"><input type="password" id="hbePass" placeholder="{{hbeMessage}}" /><label>{{hbeMessage}}</label><div class="bottom-line"></div></div><script id="hbeData" type="hbeData" data-hmacdigest="{{hbeHmacDigest}}">{{hbeEncryptedData}}</script></div>
-  wrong_pass_message: 抱歉, 这个密码看着不太对, 请再试试.
-  wrong_hash_message: 抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h1 id="对-TOC-文章进行加密"><a href="#对-TOC-文章进行加密" class="headerlink" title="对 TOC 文章进行加密"></a>对 TOC 文章进行加密</h1><p>如果您有一篇文章使用了<font color="red" size="3">TOC</font>，您需要修改模板的部分代码。这里以<font color="red" size="3">matery</font>主题作为示例：</p>
+<pre class="line-numbers language-c++"><code class="language-c++">//数据抽象：
+int hour,int minute,int second
+//代码抽象：
+setTime(),showTime()
+
+class  Clock {
+  public: 
+   void setTime(int newH, int newM, int newS);   void showTime();
+  private: 
+   int hour, minute, second;
+};
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="②封装"><a href="#②封装" class="headerlink" title="②封装"></a>②封装</h3><p><strong>将抽象出的数据成员、代码成员相结合，将它们视为一个整体。</strong></p>
 <ul>
-<li><p><strong>在<font color="red" size="3">hexo/themes/matery/layout/_partial/article.ejs</font>找到<font color="red" size="3">article.ejs</font>。</strong></p>
+<li><p>目的是增强安全性和简化编程，使用者不必了解具体的实现细节，而只需要通过外部接口，以特定的访问权限，来使用类的成员。</p>
 </li>
-<li><p><strong>然后找到<font color="red" size="3">&lt;％post.content％&gt;</font>这段代码，通常在<font color="red" size="3">30</font>行左右。</strong></p>
-</li>
-<li><p><strong>使用如下的代码来替代它：</strong></p>
+<li><p>实现封装：类声明中的{}</p>
 </li>
 </ul>
-<pre class="line-numbers language-javascriptj"><code class="language-javascriptj"><% if(post.toc == true){ %>
-  <div id="toc-div" class="toc-article" <% if (post.encrypt == true) { %>style="display:none" <% } %>>
-    <strong class="toc-title">Index</strong>
-      <% if (post.encrypt == true) { %>
-        <%- toc(post.origin, {list_number: true}) %>
-      <% } else { %>
-        <%- toc(post.content, {list_number: true}) %>
-      <% } %>
-  </div>
-<% } %>
-<%- post.content %><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>本文转载自作者<a href="https://github.com/MikeCoder/hexo-blog-encrypt" target="_blank" rel="noopener">MikeCoder</a>的<font color="red" size="3">hexo-blog-encrypt</font>项目，对有些地方略有修改。</p>
-<p>项目地址：<a href="https://github.com/MikeCoder/hexo-blog-encrypt" target="_blank" rel="noopener">https://github.com/MikeCoder/hexo-blog-encrypt</a></p>
-<p>发现这个还是挺好玩的~</p>
+<pre class="line-numbers language-c++"><code class="language-c++">//实例：
+
+class  Clock {
+  public://公有的访问权限
+      void setTime(int newH, int newM, int newS);//外部接口
+      void showTime();//外部接口
+  private: //私有的访问权限
+      int hour, minute, second;
+};//边界
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="③继承"><a href="#③继承" class="headerlink" title="③继承"></a>③继承</h3><p><strong>是C++中支持层次分类的一种机制，允许程序员在保持原有类特性的基础上，进行更具体的说明。</strong></p>
+<ul>
+<li>实现：声明派生类</li>
+</ul>
+<h3 id="④多态"><a href="#④多态" class="headerlink" title="④多态"></a>④多态</h3><p><strong>多态：同一名称，不同的功能实现方式。</strong></p>
+<ul>
+<li><p>目的：达到行为标识统一，减少程序中标识符的个数。</p>
+</li>
+<li><p>实现：重载函数和虚函数</p>
+</li>
+</ul>
+<hr>
+<h2 id="2-类和对象"><a href="#2-类和对象" class="headerlink" title="2.类和对象"></a>2.类和对象</h2><h3 id="①类和对象"><a href="#①类和对象" class="headerlink" title="①类和对象"></a>①类和对象</h3><p><strong>类是具有相同属性和行为的一组对象的集合，它为属于该类的全部对象提供了统一的抽象描述，其内部包括属性和行为两个主要部分。</strong></p>
+<ul>
+<li><p>利用类可以实现数据的封装、隐藏、继承与派生。</p>
+</li>
+<li><p>利用类易于编写大型复杂程序，其模块化程度比C中采用函数更高。</p>
+</li>
+<li><p>定义一个新的class也就定义了一个新的类型</p>
+</li>
+</ul>
+<h3 id="②类的定义"><a href="#②类的定义" class="headerlink" title="②类的定义"></a>②类的定义</h3><p>类是一种用户自定义类型，声明形式：</p>
+<pre class="line-numbers language-c++"><code class="language-c++">class 类名称
+{
+   public:
+             公有成员（外部接口）
+   private:
+             私有成员
+   protected:
+             保护型成员
+};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><p><strong>在关键字public后面声明，它们是类与外部的接口，任何外部函数都可以访问公有类型数据和函数。</strong></p>
+</li>
+<li><p><strong>在关键字private后面声明，只允许本类中的函数访问，而类外部的任何函数都不能访问。</strong><br><strong>如果紧跟在类名称的后面声明私有成员，则关键字private可以省略。</strong></p>
+</li>
+<li><p><strong>protected保护型成员与private类似，其差别表现在继承与派生时对派生类的影响不同</strong></p>
+</li>
+</ul>
+<hr>
+<h3 id="③对象"><a href="#③对象" class="headerlink" title="③对象"></a>③对象</h3><p><strong>类的对象是该类的某一特定实体，即类类型的变量。</strong><br>声明形式：</p>
+<pre class="line-numbers language-c++c"><code class="language-c++c">类名  对象名；
+例：Clock  myClock;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<ul>
+<li><p>类中成员互访：直接使用成员名</p>
+</li>
+<li><p>类外访问：使用“对象名.成员名”方式访问 public 属性的成员</p>
+</li>
+</ul>
+<h3 id="④类的成员函数"><a href="#④类的成员函数" class="headerlink" title="④类的成员函数"></a>④类的成员函数</h3><ul>
+<li><p>在类中说明原型，可以在类外给出函数体实现，并在函数名前使用类名加以限定。也可以直接在类中给出函数体，形成内联成员函数。</p>
+</li>
+<li><p>允许声明重载函数和带默认形参值的函数</p>
+</li>
+</ul>
+<h3 id="⑤内联成员函数"><a href="#⑤内联成员函数" class="headerlink" title="⑤内联成员函数"></a>⑤内联成员函数</h3><ul>
+<li><p><strong>为了提高运行时的效率，对于较简单的函数可以声明为内联形式。</strong></p>
+</li>
+<li><p>内联函数体中不要有复杂结构（如循环语句和switch语句）。</p>
+</li>
+</ul>
+<p>  在类中声明内联成员函数的方式：</p>
+<ul>
+<li>将函数体放在类的声明中。</li>
+<li>使用inline关键字。</li>
+</ul>
+<pre class="line-numbers language-c++"><code class="language-c++">//example.1类的实现
+#include<iostream>
+using namespace std;
+class Clock{
+public:        
+    void setTime(int newH = 0, int newM = 0, int newS = 0);
+    void showTime();
+private:    
+    int hour, minute, second;
+};
+int main()
+{
+    Clock myClock;
+    myClock.setTime(8, 30, 30);
+    myClock.showTime();
+    return 0;
+}
+
+void Clock::setTime(int newH, int newM,int newS)
+{
+   hour=newH;
+   minute=newM;
+   second=newS;
+}
+void Clock::showTime() 
+{
+   cout << hour << ":" << minute << ":" << second;
+}
+
+
+//运行结果：
+8:30:30
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c++"><code class="language-c++">//Point类的完整程序
+
+class Point {   //Point 类的定义
+public:
+    Point(int xx=0, int yy=0) { x = xx; y = yy; }    //构造函数，内联
+    Point(const Point& p); //复制构造函数
+    void setX(int xx) {x=xx;}
+    void setY(int yy) {y=yy;}
+    int getX() const { return x; } //常函数（第5章）
+    int getY() const { return y; } //常函数（第5章）
+private:
+    int x, y; //私有数据
+};
+//成员函数的实现
+Point::Point (const Point& p) {
+  x = p.x;
+  y = p.y;
+  cout << "Calling the copy constructor " << endl;
+}
+
+//形参为Point类对象的函数
+void fun1(Point p) {
+    cout << p.getX() << endl;
+}
+//返回值为Point类对象的函数
+Point fun2() {
+    Point a(1, 2);
+    return a;
+}
+
+//主程序
+int main() {
+    Point a(4, 5);    //第一个对象A
+    Point b = a;    //情况一，用A初始化B。第一次调用复制构造函数
+    cout << b.getX() << endl;
+    fun1(b);    //情况二，对象B作为fun1的实参。第二次调用复制构造函数
+    b = fun2();    //情况三，函数的返回值是类对象，函数返回时调用复制构造函数
+    cout << b.getX() << endl;
+    return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="3-构造函数和析构函数"><a href="#3-构造函数和析构函数" class="headerlink" title="3.构造函数和析构函数"></a>3.构造函数和析构函数</h2><h3 id="①构造函数"><a href="#①构造函数" class="headerlink" title="①构造函数"></a>①构造函数</h3><ul>
+<li><p>类中的特殊函数</p>
+</li>
+<li><p>用于描述初始化算法</p>
+</li>
+<li><p>构造函数的作用是在对象被创建时使用特定的值构造对象，将对象初始化为一个特定的初始状态。</p>
+</li>
+<li><p>在对象创建时被自动调用</p>
+</li>
+<li><p>如果程序中未声明，则系统自动产生出一个默认的构造函数，其参数列表为空</p>
+</li>
+<li><p>构造函数可以是内联函数、重载函数、带默认参数值的函数</p>
+</li>
+</ul>
+<pre class="line-numbers language-c++"><code class="language-c++">//构造函数举例
+class Clock {
+public:
+    Clock(int newH,int newM,int newS);//构造函数
+    void setTime(int newH, int newM, int newS);
+    void showTime();
+private:
+    int hour, minute, second;
+};
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c++"><code class="language-c++">//构造函数的实现：
+Clock::Clock(int newH, int newM, int newS): hour(newH), minute(newM), second(newS) {
+    }
+建立对象时构造函数的作用：
+int main() {
+  Clock c(0,0,0); //此处将自动调用构造函数
+  c.showTime();
+    return 0;
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="②复制构造函数"><a href="#②复制构造函数" class="headerlink" title="②复制构造函数"></a>②复制构造函数</h3><p><strong>复制构造函数是一种特殊的构造函数，其形参为本类的对象引用。作用是用一个已存在的对象去初始化同类型的新对象。</strong></p>
+<pre class="line-numbers language-c++"><code class="language-c++">class 类名 {
+public :
+    类名（形参）；//构造函数
+    类名（const  类名 &对象名）；//复制构造函数
+           ...
+}；
+类名::类（ const  类名 &对象名）//复制构造函数的实现
+{    函数体    }
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>复制构造函数被调用的三种情况</strong></p>
+<ul>
+<li><p>定义一个对象时，以本类另一个对象作为初始值，发生复制构造；</p>
+</li>
+<li><p>如果函数的形参是类的对象，调用函数时，将使用实参对象初始化形参对象，发生复制构造；</p>
+</li>
+<li><p>如果函数的返回值是类的对象，函数执行完成返回主调函数时，将使用return语句中的对象初始化一个临时无名对象，传递给主调函数，此时发生复制构造。</p>
+</li>
+</ul>
+<p><strong>有时不应该进行复制和赋值</strong></p>
+<ul>
+<li>例如，房屋中介系统有一个类描述待售房屋</li>
+</ul>
+<pre class="line-numbers language-c++"><code class="language-c++">class HomeForSale{…}
+//通常没有完全一样的房屋，因此不应有复制构造<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c++"><code class="language-c++">//解决方法一：将不应该有的默认函数定义为私有
+
+class HomeForSale{
+public:
+    …
+private:
+    …
+    HomeForSale(const HomeForSale&);
+    HomeForSale& operator=(const HomeForSale&)
+
+//解决方法二：定义一个Uncopyable类作为基类
+
+class Uncopyable{
+protected:
+    Uncopyable(){}
+    ~ Uncopyable(){}
+private:
+     Uncopyable(const Uncopyable&);
+     Uncopyable operator=(const Uncopyable&);
+};
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="③默认构造函数"><a href="#③默认构造函数" class="headerlink" title="③默认构造函数"></a>③默认构造函数</h3><p><strong>调用时可以不需要参数的构造函数都是默认构造函数。</strong></p>
+<ul>
+<li><p>当不定义构造函数时，编译器自动产生默认构造函数</p>
+</li>
+<li><p>在类中可以自定义无参数的构造函数，也是默认构造函数</p>
+</li>
+<li><p>全部参数都有默认形参值的构造函数也是默认构造函数</p>
+</li>
+</ul>
+<p><strong>下面两个都是默认构造函数，如果在类中同时出现，将产生编译错误：</strong></p>
+<pre class="line-numbers language-c++"><code class="language-c++">Clock();
+Clock(int newH=0,int newM=0,int newS=0);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c++"><code class="language-c++">//example.1
+class Clock {
+public:
+    Clock(int newH,int newM,int newS);//构造函数
+    Clock();//默认构造函数
+    void setTime(int newH, int newM, int newS);
+    void showTime();
+private:
+    int hour, minute, second;
+};
+//构造函数的实现：
+Clock::Clock(int newH, int newM, int newS): hour(newH), minute(newM), second(newS) { }
+//默认构造函数的实现：
+Clock::Clock(): hour(0), minute(0), second(0) { }
+
+//建立对象时构造函数的作用：
+int main() {
+  Clock c(8,10,0); //调用有参构造函数
+  Clock c2();//调用无参构造函数
+  c.showTime();
+  c2.showTime();
+    return 0;
+}
+
+void Clock::setTime(int newH, int newM,int newS)
+{
+   hour = newH;
+   minute = newM;
+   second = newS;
+}
+void Clock::showTime() 
+{
+   cout << hour << ":" << minute << ":" << second;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>有时不应该有默认的构造函数</strong></p>
+<ul>
+<li><p>有些类，不应该有默认初始化。<br>例如，没有姓名的学生对象是没有意义的<br>解决：<br>至少定义一个有参数的构造函数<br>不定义默认构造函数</p>
+</li>
+<li><p>需要深层复制时，默认的复制构造会引起错误。<br>解决：<br>自定义实现深层复制的复制构造函数</p>
+</li>
+</ul>
+<h3 id="④隐含的复制构造函数"><a href="#④隐含的复制构造函数" class="headerlink" title="④隐含的复制构造函数"></a>④隐含的复制构造函数</h3><p>如果程序员没有为类声明拷贝初始化构造函数，则编译器自己生成一个隐含的复制构造函数。</p>
+<p>这个构造函数执行的功能是：用作为初始值的对象的每个数据成员的值，初始化将要建立的对象的对应数据成员。</p>
+<h3 id="⑤函数参数尽量传递常引用而不是值"><a href="#⑤函数参数尽量传递常引用而不是值" class="headerlink" title="⑤函数参数尽量传递常引用而不是值"></a>⑤函数参数尽量传递常引用而不是值</h3><ul>
+<li>传递对象值会引起复制构造和析构，增加时间空间开销。</li>
+<li>传常引用可避免这一问题。以引用做参数时，尽量使用常引用。</li>
+</ul>
+<pre class="line-numbers language-c++"><code class="language-c++">//例如：
+void fun1(const Point &p) {
+    cout << p.getX() << endl;
+   p.setX(1); //语法错误：p是常引用而setX不是常函数
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>基本类型、STL的迭代器和函数对象传值较好。</p>
+<h3 id="⑥返回值优化"><a href="#⑥返回值优化" class="headerlink" title="⑥返回值优化"></a>⑥返回值优化</h3><ul>
+<li><p>当函数返回一个对象时，会构造临时对象用以返回，这会增加开销。</p>
+</li>
+<li><p>用返回引用或者指针替代不是好办法。返回指向局部对象的指针或者引用，会引发错误。返回指向动态内存的指针或引用容易忘记动态空间释放，引起内存泄露。</p>
+</li>
+<li><p>解决显式构造临时对象返回。此举表面上还是构造了一个临时对象，但是编译器通常都会进行优化，使之不产生临时对象。</p>
+</li>
+</ul>
+<pre class="line-numbers language-c++"><code class="language-c++">//例如：
+Point fun2() {
+    return Point(1, 2);
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="⑦析构函数"><a href="#⑦析构函数" class="headerlink" title="⑦析构函数"></a>⑦析构函数</h3><ul>
+<li><p>完成对象被删除前的一些清理工作。</p>
+</li>
+<li><p>在对象的生存期结束的时刻系统自动调用它，然后再释放此对象所属的空间。</p>
+</li>
+<li><p>如果程序中未声明析构函数，编译器将自动产生一个隐含的析构函数。</p>
+</li>
+</ul>
+<pre class="line-numbers language-c++"><code class="language-c++">//构造函数和析构函数举例
+
+#include <iostream>
+using namespace std;
+class Point {     
+public:
+  Point(int xx,int yy);
+  ~Point();
+  //...其他函数原型
+private:
+  int x, y;
+};
+
+Point::Point(int xx,int yy) {
+  x = xx;
+  y = yy;
+}
+Point::~Point() {
+}
+//...其他函数的实现略<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="3-类的组合"><a href="#3-类的组合" class="headerlink" title="3.类的组合"></a>3.类的组合</h2><h3 id="①组合"><a href="#①组合" class="headerlink" title="①组合"></a>①组合</h3><ul>
+<li><p>类中的成员数据是另一个类的对象。</p>
+</li>
+<li><p>可以在已有抽象的基础上实现更复杂的抽象。</p>
+</li>
+</ul>
+<p><strong>类组合的构造函数设计</strong></p>
+<ul>
+<li>原则：不仅要负责对本类中的基本类型成员数据赋初值，也要对对象成员初始化。</li>
+</ul>
+<pre class="line-numbers language-c++"><code class="language-c++">//声明形式：
+类名::类名(对象成员所需的形参，本类成员形参)
+       :对象1(参数)，对象2(参数)，......
+{  
+//函数体其他语句
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>构造组合类对象时的初始化次序</strong></p>
+<ul>
+<li><p>首先对构造函数初始化列表中列出的成员（包括基本类型成员和对象成员）进行初始化，初始化次序是成员在类体中定义的次序。</p>
+</li>
+<li><p>成员对象构造函数调用顺序：按对象成员的声明顺序，先声明者先构造。</p>
+</li>
+<li><p>初始化列表中未出现的成员对象，调用用默认构造函数（即无形参的）初始化</p>
+</li>
+<li><p>处理完初始化列表之后，再执行构造函数的函数体</p>
+</li>
+</ul>
+<pre class="line-numbers language-c++"><code class="language-c++">//类的组合，线段（Line）类
+
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+class Point {    //Point类定义
+public:
+    Point(int xx = 0, int yy = 0) {
+        x = xx;
+        y = yy;
+    }
+    Point(Point &p);
+    int getX() { return x; }
+    int getY() { return y; }
+private:
+    int x, y;
+};
+Point::Point(Point &p) {    //复制构造函数的实现
+    x = p.x;
+    y = p.y;
+    cout << "Calling the copy constructor of Point" << endl;
+}
+
+public:    //外部接口
+    Line(Point xp1, Point xp2);
+    Line(Line &l);
+    double getLen() { return len; }
+private:    //私有数据成员
+    Point p1, p2;    //Point类的对象p1,p2
+    double len;
+};
+//组合类的构造函数
+Line::Line(Point xp1, Point xp2) : p1(xp1), p2(xp2) {
+    cout << "Calling constructor of Line" << endl;
+    double x = static_cast<double>(p1.getX() - p2.getX());
+    double y = static_cast<double>(p1.getY() - p2.getY());
+    len = sqrt(x * x + y * y);
+}
+Line::Line (Line &l): p1(l.p1), p2(l.p2) {//组合类的复制构造函数
+    cout << "Calling the copy constructor of Line" << endl;
+    len = l.len;
+}
+
+//主函数
+int main() {
+    Point myp1(1, 1), myp2(4, 5);    //建立Point类的对象
+    Line line(myp1, myp2);    //建立Line类的对象
+    Line line2(line);    //利用复制构造函数建立一个新对象
+    cout << "The length of the line is: ";
+    cout << line.getLen() << endl;
+    cout << "The length of the line2 is: ";
+    cout << line2.getLen() << endl;
+    return 0;
+}
+
+
+//运行结果如下：
+Calling the copy constructor of Point
+Calling the copy constructor of Point
+Calling the copy constructor of Point
+Calling the copy constructor of Point
+Calling constructor of Line
+Calling the copy constructor of Point
+Calling the copy constructor of Point
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>前向引用声明</strong></p>
+<ul>
+<li><p>类应该先声明，后使用</p>
+</li>
+<li><p>如果需要在某个类的声明之前，引用该类，则应进行前向引用声明。</p>
+</li>
+<li><p>前向引用声明只为程序引入一个标识符，但具体声明在其他地方。</p>
+</li>
+</ul>
+<pre class="line-numbers language-c++"><code class="language-c++">//example
+
+class B;  //前向引用声明
+class A {
+public:
+  void f(B b);
+};
+class B {
+public:
+  void g(A a);
+};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>前向引用声明注意事项</strong></p>
+<p>使用前向引用声明虽然可以解决一些问题，但它并不是万能的。需要注意的是，尽管使用了前向引用声明，但是在提供一个完整的类声明之前，不能声明该类的对象，也不能在内联成员函数中使用该类的对象</p>
+<pre class="line-numbers language-c++"><code class="language-c++">class Fred; //前向引用声明
+class Barney {
+   Fred x; //错误：类Fred的声明尚不完善
+};
+class Fred {
+   Barney y;
+};
+
+//更正
+class Fred;    //前向引用声明
+class Barney {
+public:
+  ……
+  void method() {
+    x.yabbaDabbaDo();    //错误：Fred类的对象在定义之前被使用
+  }
+ private:
+  Fred &x;//正确，经过前向引用声明，可以声明Fred类的对象引用
+};
+
+class Fred {
+public:
+  void yabbaDabbaDo();
+private:
+  Barney &y;
+}; 
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>前向引用声明注意事项</strong></p>
+<ul>
+<li>应该记住：当使用前向引用声明时，只能使用被声明的符号，而不能涉及类的任何细节。</li>
+</ul>
+<hr>
+<h2 id="4-UML图形标识"><a href="#4-UML图形标识" class="headerlink" title="4.UML图形标识"></a>4.UML图形标识</h2><h3 id="①UML简介"><a href="#①UML简介" class="headerlink" title="①UML简介"></a>①UML简介</h3><p><strong>UML（Unified Modeling Language）语言是一种可视化的的面向对象建模语言。</strong></p>
+<p><strong>UML有三个基本的部分</strong></p>
+<ul>
+<li><p>事物（Things）UML中重要的组成部分，在模型中属于最静态的部分，代表概念上的或物理上的元素</p>
+</li>
+<li><p>关系（Relationships）关系把事物紧密联系在一起</p>
+</li>
+<li><p>图（Diagrams）图是很多有相互相关的事物的组</p>
+</li>
+</ul>
+<h3 id="②UML类图"><a href="#②UML类图" class="headerlink" title="②UML类图"></a>②UML类图</h3><p><strong>举例：Clock类的完整表示:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Clock</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>- hour:  int</td>
+</tr>
+<tr>
+<td>- minute:  int</td>
+</tr>
+<tr>
+<td>- second:  int</td>
+</tr>
+<tr>
+<td>+ showTime(): void</td>
+</tr>
+<tr>
+<td>+ setTime(newH:int=0,newM:int=0,newS:int=0)</td>
+</tr>
+</tbody></table>
+<p><strong>Clock类的简洁表示</strong></p>
+<table>
+<thead>
+<tr>
+<th>Clock</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="③对象图"><a href="#③对象图" class="headerlink" title="③对象图"></a>③对象图</h3><table>
+<thead>
+<tr>
+<th align="center">myClock:Clock</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">- hour: int</td>
+</tr>
+<tr>
+<td align="center">- minute: int</td>
+</tr>
+<tr>
+<td align="center">- second: int</td>
+</tr>
+</tbody></table>
+<h3 id="④几种关系的图形标识"><a href="#④几种关系的图形标识" class="headerlink" title="④几种关系的图形标识"></a>④几种关系的图形标识</h3><p><strong>依赖关系</strong></p>
+<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/%E5%9B%BE%E7%89%875.png" alt></p>
+<p>图中的“类A”是源，“类B”是目标，表示“类A”使用了“类B”，或称“类A”依赖“类B”</p>
+<p><strong>作用关系—关联</strong></p>
+<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/%E5%9B%BE%E7%89%874.png" alt></p>
+<p>图中的“重数A”决定了类B的每个对象与类A的多少个对象发生作用，同样“重数B”决定了类A的每个对象与类B的多少个对象发生作用。</p>
+<p><strong>包含关系—聚集和组合</strong></p>
+<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/%E5%9B%BE%E7%89%876.png" alt></p>
+<p>聚集表示类之间的关系是整体与部分的关系，“包含”、“组成”、“分为……部分”等都是聚集关系。共享聚集：部分可以参加多个整体；组成聚集：整体拥有各个部分，整体与部分共存，如果整体不存在了，那么部分也就不存在了。</p>
+<p><strong><em>采用UML方法来描述例4-4中Line类和Point类的关系</em></strong></p>
+<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/%E5%9B%BE%E7%89%878.png" alt></p>
+<p><strong>继承关系—泛化</strong></p>
+<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/%E5%9B%BE%E7%89%877.png" alt></p>
+<p><strong><em>带有注释的Line类和Point类关系的描述</em></strong></p>
+<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/%E5%9B%BE%E7%89%873.png" alt></p>
+<p><strong>注释</strong></p>
+<p>在UML图形上，注释表示为带有褶角的矩形，然后用虚线连接到UML的其他元素上，它是一种用于在图中附加文字注释的机制。</p>
+<h2 id="5-结构体和联合体"><a href="#5-结构体和联合体" class="headerlink" title="5.结构体和联合体"></a>5.结构体和联合体</h2><h3 id="①结构体"><a href="#①结构体" class="headerlink" title="①结构体"></a>①结构体</h3><p><strong>结构体是一种特殊形态的类</strong></p>
+<ul>
+<li><p>与类的唯一区别：类的缺省访问权限是private，结构体的缺省访问权限是public</p>
+</li>
+<li><p>结构体存在的主要原因：与C语言保持兼容</p>
+</li>
+</ul>
+<p><strong>什么时候用结构体而不用类</strong></p>
+<ul>
+<li><p>定义主要用来保存数据、而没有什么操作的类型</p>
+</li>
+<li><p>人们习惯将结构体的数据成员设为公有，因此这时用结构体更方便</p>
+</li>
+</ul>
+<p><strong>结构体的定义和初始化</strong></p>
+<pre class="line-numbers language-c++"><code class="language-c++">//结构体定义
+struct 结构体名称 {
+     公有成员
+protected:
+    保护型成员
+private:
+     私有成员
+};
+
+
+//一些结构体变量的初始化可以用以下形式
+类型名 变量名 = { 成员数据1初值, 成员数据2初值, …… };
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c++"><code class="language-c++">//1.用结构体表示学生的基本信息
+
+#include <iostream>
+#include <iomanip>
+#include <string>
+using namespace std;
+
+struct Student {    //学生信息结构体
+    int num;        //学号
+    string name;    //姓名，字符串对象，将在第6章详细介绍
+    char sex;        //性别
+    int age;        //年龄
+};
+
+int main() {
+    Student stu = { 97001, "Lin Lin", 'F', 19 };
+    cout << "Num:  " << stu.num << endl;
+    cout << "Name: " << stu.name << endl;
+    cout << "Sex:  " << stu.sex << endl;
+    cout << "Age:  " << stu.age << endl;
+    return 0;
+}
+
+//运行结果：
+Num:  97001
+Name: Lin Lin
+Sex:  F
+Age:  19
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="②联合体"><a href="#②联合体" class="headerlink" title="②联合体"></a>②联合体</h3><pre class="line-numbers language-c++"><code class="language-c++">//声明形式
+union 联合体名称 {
+    公有成员
+protected:
+    保护型成员
+private:
+    私有成员
+};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>特点：</strong></p>
+<ul>
+<li><p>成员共用相同的内存单元</p>
+</li>
+<li><p>任何两个成员不会同时有效</p>
+</li>
+</ul>
+<p><strong>联合体的内存分配</strong></p>
+<pre class="line-numbers language-c++"><code class="language-c++">union Mark {    //表示成绩的联合体
+    char grade;    //等级制的成绩
+    bool pass;    //只记是否通过课程的成绩
+    int percent;    //百分制的成绩
+};
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/%E5%9B%BE%E7%89%872.png" alt></p>
+<p><strong>无名联合</strong></p>
+<p>无名联合没有标记名，只是声明一个成员项的集合，这些成员项具有相同的内存地址，可以由成员项的名字直接访问。</p>
+<pre class="line-numbers language-c++"><code class="language-c++">例：
+union {
+  int i;
+  float f;
+}
+//在程序中可以这样使用：
+i = 10;
+f = 2.2;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c++"><code class="language-c++">//example.使用联合体保存成绩信息，并且输出。
+
+#include <string>
+#include <iostream>
+using namespace std;
+class ExamInfo {
+private:
+    string name;    //课程名称
+    enum { GRADE, PASS, PERCENTAGE } mode;//采用何种计分方式
+    union {
+        char grade;    //等级制的成绩
+        bool pass;    //只记是否通过课程的成绩
+        int percent;    //百分制的成绩
+    };
+
+public:
+    //三种构造函数，分别用等级、是否通过和百分初始化
+    ExamInfo(string name, char grade)
+        : name(name), mode(GRADE), grade(grade) { }
+    ExamInfo(string name, bool pass)
+        : name(name), mode(PASS), pass(pass) { }
+    ExamInfo(string name, int percent)
+        : name(name), mode(PERCENTAGE), percent(percent) { }
+    void show();
+}
+
+void ExamInfo::show() {
+    cout << name << ": ";
+    switch (mode) {
+      case GRADE: cout << grade;  break;
+      case PASS: cout << (pass ? "PASS" : "FAIL"); break;
+      case PERCENTAGE: cout << percent; break;
+    }
+    cout << endl;
+}
+
+int main() {
+    ExamInfo course1("English", 'B');
+    ExamInfo course2("Calculus", true);
+    ExamInfo course3("C++ Programming", 85);
+    course1.show();
+    course2.show();
+    course3.show();
+    return 0;
+}
+
+//运行结果：
+English: B
+Calculus: PASS
+C++ Programming: 85<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
 
             </div>
             <hr />
@@ -1006,9 +1657,9 @@ encrypt: # hexo-blog-encrypt
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《对 Hexo 博客文章进行加密》
+                    《C++学习笔记整理-类与对象》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/03/12/dui-hexo-bo-ke-wen-zhang-jin-xing-jia-mi/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/04/26/c-xue-xi-bi-ji-zheng-li-lei-yu-dui-xiang/" property="cc:attributionName"
                rel="cc:attributionURL">
                 Tyzhao
             </a> 采用
@@ -1049,7 +1700,7 @@ encrypt: # hexo-blog-encrypt
         repo: 'muyiio.github.io',
         owner: 'MUYIio',
         admin: "MUYIio",
-        id: '2020/03/12/dui-hexo-bo-ke-wen-zhang-jin-xing-jia-mi/',
+        id: '2020/04/26/c-xue-xi-bi-ji-zheng-li-lei-yu-dui-xiang/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1332,50 +1983,48 @@ encrypt: # hexo-blog-encrypt
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/03/27/shi-yong-picgo-teng-xun-yun-dui-xiang-cun-chu-cos-zuo-wei-tu-chuang/">
+                <a href="/2020/04/26/c-xue-xi-bi-ji-zheng-li-lei-yu-dui-xiang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="使用 PicGo+腾讯云对象存储COS 作为图床">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="C++学习笔记整理-类与对象">
                         
-                        <span class="card-title">使用 PicGo+腾讯云对象存储COS 作为图床</span>
+                        <span class="card-title">C++学习笔记整理-类与对象</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            选择PicGo+对象存储COS图床来储存文章图片，优化访问速度也为了更加方便。
+                            抽象是对具体对象（问题）进行概括，抽出这一类对象的公共性质并加以描述的过程.
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-27
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-04-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/图床/" class="post-category" target="_blank">
-                                    图床
+                            <a href="/categories/C/" class="post-category" target="_blank">
+                                    C++
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/PicGo/" target="_blank">
-                        <span class="chip bg-color">PicGo</span>
-                    </a>
-                    
-                    <a href="/tags/COS/" target="_blank">
-                        <span class="chip bg-color">COS</span>
+                    <a href="/tags/学习笔记/" target="_blank">
+                        <span class="chip bg-color">学习笔记</span>
                     </a>
                     
                 </div>
@@ -1389,31 +2038,33 @@ encrypt: # hexo-blog-encrypt
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/03/05/vmware-an-zhuang-centos-8-1-wan-zheng-jiao-cheng/">
+                <a href="/2020/04/26/c-bian-cheng-ti-mu-zheng-he/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="VMware 安装 CentOS 8.1 完整教程 ">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="C++编程题目整合">
                         
-                        <span class="card-title">VMware 安装 CentOS 8.1 完整教程 </span>
+                        <span class="card-title">C++编程题目整合</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            这篇文章详细的记录我安装CentOS 8.1的过程，其他CentOS 8系列的发行版本安装可作参考。
+                            就从第四章类与对象开始吧，前面的章节和c差不多。
+1.点类定义和使用【问题描述】
+定义一个点类，该类包含整形坐标x,y以及用于设置坐标值的函数，名为setxy（）参数自行确定，以及用于显示坐标的函数displayxy()参数自行设置。合理编
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-05
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-04-26
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Linux/" class="post-category" target="_blank">
-                                    Linux
+                            <a href="/categories/C/" class="post-category" target="_blank">
+                                    C++
                                 </a>
                             
                             
@@ -1423,12 +2074,8 @@ encrypt: # hexo-blog-encrypt
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/CentOS/" target="_blank">
-                        <span class="chip bg-color">CentOS</span>
-                    </a>
-                    
-                    <a href="/tags/VMware/" target="_blank">
-                        <span class="chip bg-color">VMware</span>
+                    <a href="/tags/学习笔记/" target="_blank">
+                        <span class="chip bg-color">学习笔记</span>
                     </a>
                     
                 </div>
