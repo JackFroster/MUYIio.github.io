@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.muyiio.com/"/>
-  <updated>2020-05-08T12:12:04.686Z</updated>
+  <updated>2020-05-08T12:18:59.828Z</updated>
   <id>https://www.muyiio.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>C++学习笔记整理-第三章《函数》</title>
+    <title>C++学习笔记整理-函数</title>
     <link href="https://www.muyiio.com/2020/05/08/c-xue-xi-bi-ji-zheng-li-di-san-zhang-han-shu/"/>
     <id>https://www.muyiio.com/2020/05/08/c-xue-xi-bi-ji-zheng-li-di-san-zhang-han-shu/</id>
     <published>2020-05-08T11:54:09.000Z</published>
-    <updated>2020-05-08T12:12:04.686Z</updated>
+    <updated>2020-05-08T12:18:59.828Z</updated>
     
     <summary type="html">
     
@@ -44,11 +44,11 @@
   </entry>
   
   <entry>
-    <title>C++学习笔记整理-第四章《类与对象》</title>
+    <title>C++学习笔记整理-类与对象</title>
     <link href="https://www.muyiio.com/2020/04/26/c-xue-xi-bi-ji-zheng-li-di-si-zhang-lei-yu-dui-xiang/"/>
     <id>https://www.muyiio.com/2020/04/26/c-xue-xi-bi-ji-zheng-li-di-si-zhang-lei-yu-dui-xiang/</id>
     <published>2020-04-26T10:53:44.000Z</published>
-    <updated>2020-05-08T11:55:14.317Z</updated>
+    <updated>2020-05-08T12:19:16.926Z</updated>
     
     <summary type="html">
     
@@ -97,11 +97,11 @@
   </entry>
   
   <entry>
-    <title>C++学习笔记整理-第五章《数据的共享与保护》</title>
+    <title>C++学习笔记整理-数据的共享与保护</title>
     <link href="https://www.muyiio.com/2020/04/23/c-xue-xi-bi-ji-zheng-li-di-wu-zhang-shu-ju-de-gong-xiang-yu-bao-hu/"/>
     <id>https://www.muyiio.com/2020/04/23/c-xue-xi-bi-ji-zheng-li-di-wu-zhang-shu-ju-de-gong-xiang-yu-bao-hu/</id>
     <published>2020-04-23T04:59:54.000Z</published>
-    <updated>2020-05-08T11:55:01.271Z</updated>
+    <updated>2020-05-08T12:19:39.313Z</updated>
     
     <summary type="html">
     
